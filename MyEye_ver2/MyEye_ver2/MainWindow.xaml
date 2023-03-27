@@ -1,0 +1,43 @@
+﻿<Window x:Class="MyEye_ver2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyEye_ver2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+
+        <!-- 상단 제어버튼 -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="11*" />
+        </Grid.RowDefinitions>
+        <Border Background="#2c3e50" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Team Name" Margin="10" VerticalAlignment="Center" Foreground="White" FontSize="20" />
+                <Button x:Name="MainButton" Content="Main" Height="50" Margin="10" Grid.Column="1" VerticalAlignment="Center" FontSize="24" Click="MainButton_Click" />
+                <Button x:Name="AnalysisButton" Content="Analysis" Height="50" Margin="10" Grid.Column="2" VerticalAlignment="Center" FontSize="24" Click="AnalysisButton_Click" />
+                <Button x:Name="ReplayButton" Content="Replay" Margin="10" Height="50" Grid.Column="3" VerticalAlignment="Center" FontSize="24" Click="StartButton_Click" />
+                <Button x:Name="StartButton" Content="Start" Margin="10" Height="50" Grid.Column="4" VerticalAlignment="Center" FontSize="24" />
+                <Button x:Name="EndButton" Content="End" Margin="10" Height="50" Grid.Column="5" VerticalAlignment="Center" FontSize="24" />
+            </Grid>
+        </Border>
+
+        <!-- 하단 출력영역 -->
+        <Border Background="#ecf0f1" Grid.Row="1">
+            <Frame x:Name="MainContent" NavigationUIVisibility="Hidden" />
+
+
+        </Border>
+
+    </Grid>
+</Window>
